@@ -1,0 +1,220 @@
+
+@import "bootstrap";
+
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+$white:                 #ffffff !default;
+
+$brandColor: #5C97BF;
+
+
+
+
+
+
+
+
+/***************************************************BODY*****************************************/
+
+.container {
+  width: 100%;
+
+}
+.navbar{
+
+}
+
+.links {
+  padding-top: 80px;
+}
+.link-title {
+  padding-right: 40px;
+  width:300px;
+  font-weight: bold;
+  
+}
+
+.latest{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a {
+
+}
+/*************************************************Article Page Listings *************************/
+
+$grid-gutter-width: 1.5rem;
+$grid-columns: 12;
+
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+body {
+  font-size: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+}
+.content-main,
+.content-secondary {
+  background: white;
+  line-height: 25px;
+  text-align: left;
+  border-right: 1px solid #ddd;
+}
+
+
+
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin make-container($gutter: $grid-gutter-width)
+{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row($gutter: $grid-gutter-width)
+{
+  margin-left:  ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+@mixin make-col($gutter: $grid-gutter-width)
+{
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+
+@mixin make-col-span($columns)
+{
+  width: percentage(($columns / $grid-columns));
+}
+@mixin make-col-offset($columns)
+{
+  margin-left: percentage(($columns / $grid-columns));
+}
+@mixin make-col-push($columns)
+{
+  left: percentage(($columns / $grid-columns));
+}
+@mixin make-col-pull($columns)
+{
+  right: percentage(($columns / $grid-columns));
+}
+
+
+.container {
+  @include make-container();
+}
+
+.row {
+  @include make-row();
+}
+
+.content-main {
+  @include make-col();
+
+  @media (max-width: 32em) {
+    @include make-col-span(6);
+  }
+
+  @media (min-width: 32.1em) {
+    @include make-col-span(8);
+  }
+}
+
+.content-secondary {
+  @include make-col();
+
+  @media (max-width: 32em) {
+    @include make-col-span(6);
+  }
+
+  @media (min-width: 32.1em) {
+    @include make-col-span(4);
+  }
+}
+
+
+/*************************************************** MODAL *************************************/
+
+h3{
+  font-family: pacifico;
+  margin: 1em 0;
+  font-size: 2.4em;
+  }
+h4{
+    margin-bottom: 2em 0;
+  }
+.email-capture{
+   border: 1px solid #f1f1f1;
+   text-align: center;
+   padding: 3em;
+   margin-top: 3em;  
+   margin-bottom: 3em;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+.form-group{
+  width: 100%;
+  }
+}
+.mailchimp{
+  width: 100%;
+  form{width: 100%;}
+    input[type="email"] {
+      width: 100%;
+      background: #f5f5f5;
+      height: 55px;
+      padding: 18px 20px;
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+      border: none;
+      outline: none;
+      color: #444;
+      float: left;
+      -webkit-appearance: none;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 -1px rgba(0,0,0,0.1);
+      -moz-box-shadow: inset 0 -1px rgba(0,0,0,0.1);
+      box-shadow: inset 0 -1px rgba(0,0,0,0.1);  
+    }
+    input[type="submit"] {
+      width: 100%;
+      background-color: $brandColor;
+      color: $white;      
+      font-size: 18px;
+      height: 55px;
+      float: left;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px; 
+    }
+    .form_nospam{
+      font-size: 12px;
+      font-size: 1.2rem;
+    }
+  }
+  
+.btn{
+  width:200px;
+}

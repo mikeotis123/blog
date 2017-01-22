@@ -1,22 +1,42 @@
 
-<h1>Listing Articles</h1>
+<div class="container">
+
+ <div class="row">
+      <div class="content-main">
+      
+<h1 class="latest">Latest Blogs</h1>
+
 <%= link_to 'New article', new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+<table class="latest-table">
+  
+  <% @articles.each do |article | %>
+
+    <tr class="table-row">
+      <td class="links link-title"><%= truncate article.title, length:30 %></td>
+      <td class="links"><%= truncate article.text, length: 300 %></td>
+      <td class="links"><%= link_to 'Show', article_path(article) %></td>
+      <td class="links"><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td class="links"><%= link_to 'Destroy', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
+  
 </table>
+</div>
+      <div class="content-secondary">
+      <h1 class="latest">Latest Podcasts</h1>
+
+      <figure class="figure">
+
+    
+<%= image_tag "assets/images/placeholder.png" %>
+
+ 
+  <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+</figure>
+    </div>
+
+    </div>
+    </div>
+  
