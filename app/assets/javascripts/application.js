@@ -13,7 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-
+//= require rails-timeago
 //= require turbolinks
 //= require_tree .
 // Floating label headings for the contact form

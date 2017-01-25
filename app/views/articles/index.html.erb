@@ -1,51 +1,81 @@
 
 
 
-
-
-
-    <!-- Main Content -->
+ <!-- Page Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                       <% @articles.each do |article | %>
 
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+<% @articles.each do |article | %>
+              
                         <h2 class="post-title">
                           <%= truncate article.title, length:30 %>
-                        </h2>
-                        <table class="latest-table">
-  
-  
-    <tr class="table-row">
-      <td class="links link-title"></td>
-      <td class="links"><%= truncate article.text, length: 300 %></td>
-      <td class="links"><%= link_to 'Show', article_path(article) %></td>
-      <td class="links"><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td class="links"><%= link_to 'Destroy', article_path(article),
+                          
+                        </h2>          
+            
+      
+      <%= truncate article.text, length: 300 %>
+      <%= link_to 'Show', article_path(article) %>
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Destroy', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
+              data: { confirm: 'Are you sure?' } %>
   
-</table>
-
-                    </a>
-                  
-                </div>
-                <hr>
-                
+  <% end %>
+                <!-- First Blog Post -->
+              
+                <!-- Second Blog Post -->
                
-                               <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <hr>
+                <!-- Third Blog Post -->
+                
+              
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            
+
+
+                       
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+               
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   

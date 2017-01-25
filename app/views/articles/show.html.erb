@@ -19,6 +19,7 @@
                       <%= @article.text %>
                     </p>
                     
+                      <%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
 
 
                     <h2>Comments</h2>
