@@ -1,3 +1,22 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1810148502574467";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1810148502574467";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
 
 
 
@@ -7,7 +26,7 @@
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class=".col-xs-12 .col-md-8">
 <% @articles.each do |article | %>
               
                         <h2 class="post-title">
@@ -17,22 +36,33 @@
             
       
       <%= truncate article.text, length: 300 %>
-      <%= link_to 'Show', article_path(article) %>
+    
+      <ul>
+
+      <%= link_to 'See More', article_path(article) %>
+      
       <%= link_to 'Edit', edit_article_path(article) %>
       <%= link_to 'Destroy', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+  </ul>
   
   <% end %>
-                <!-- First Blog Post -->
-              
-                <!-- Second Blog Post -->
-               
+  <div .col-xs-8 .col-md-8>
 
-                <!-- Third Blog Post -->
-                
+<iframe width="400" height="auto" src="https://www.youtube.com/embed/w_O_32NznEM" frameborder="0" allowfullscreen></iframe>
+
+
+<iframe width="400" height="auto" src="https://www.youtube.com/embed/xIiohU6fWuA" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+ <div class="fb-video" data-href="https://www.facebook.com/william.kyles.1/videos/vb.1789054154/10206426325695487/?type=2&amp;theater" data-width="200" data-show-text="false"><blockquote cite="https://www.facebook.com/william.kyles.1/videos/10206426325695487/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/william.kyles.1/videos/10206426325695487/"></a><p>I need help but wait, I don&#039;t know what I need help on.....</p>Posted by <a href="https://www.facebook.com/william.kyles.1">William Kyles</a> on Friday, January 6, 2017</blockquote></aside>
+ 
               
             </div>
+<iframe width="500" height="auto" src="https://www.youtube.com/embed/qWyKIBjfWxQ" frameborder="0" allowfullscreen></iframe>
 
             <!-- Blog Sidebar Widgets Column -->
             
