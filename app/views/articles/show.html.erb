@@ -4,58 +4,47 @@
 
 
  <!-- Post Content -->
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                      
                     
-                    <p>
-                      <strong>Title:</strong>
-                      <%= @article.title %>
-                    </p>
- 
-                    <p>
-                      <strong>Text:</strong>
-                      <%= @article.text %>
-                    </p>
+                                       
                     
-                      <%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
+                                         
+                    
+
+    <article class="pexcerpt1 post excerpt last">
+              <a href="http://theamazingseller.com/tas-311-how-to-earn-extra-money-fast-while-still-working-9-to-5-job-nick-loper/" id="featured-thumbnail" rel="nofollow" title="TAS 311 : How to Earn Extra Money FAST While Still Working 9 to 5 Job with Nick Loper">
+              <div class="featured-thumbnail">
+               <%= image_tag "/assets/willkyles.jpg" %>
+              </div>
+              <div class="featured-cat">
+                Podcast
+              </div></a>
+              <header>
+                <h2 class="title">
+                    <%= @article.title %>
+
+                </h2>
+                <div class="post-info">
+                  <span class="theauthor"><a href="http://theamazingseller.com/author/scott-voelker/" rel="author" title="Posts by Scott Voelker">Scott Voelker</a></span>| <span class="thetime"> <%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
+</span>
+                </div>
+              </header><!--.header-->
+              <div class="post-content image-caption-format-1">
+               <p>
+                 
+                    <%= @article.text %>
+
+               </p>
+              </div><span class="readMore"><a href="http://theamazingseller.com/tas-311-how-to-earn-extra-money-fast-while-still-working-9-to-5-job-nick-loper/" rel="nofollow" title="TAS 311 : How to Earn Extra Money FAST While Still Working 9 to 5 Job with Nick Loper">Read More</a></span>
+            </article>
 
 
-                    <h2>Comments</h2>
-                    <%= render @article.comments %>
- 
-                    <h2>Add a comment:</h2>
-                    <%= form_for([@article, @article.comments.build]) do |f| %>
-                      <p>
-                        <%= f.label :commenter %><br>
-                       <%= f.text_field :commenter %>
-                      </p>
-                     <p>
-                       <%= f.label :body %><br>
-                        <%= f.text_area :body %>
-                     </p>
-                     <p>
-                       <%= f.submit %>
-                     </p>
-                    <% end %>
- 
-                    <%= link_to 'Edit', edit_article_path(@article) %> |
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
                     <%= link_to 'Back', articles_path %>
 
 
-
-
-
-
-
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <hr>
-
+ 
 
 
 
